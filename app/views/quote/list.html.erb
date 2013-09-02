@@ -1,0 +1,17 @@
+<%= flash[:notice] %>
+<h1>Quotes list</h1>
+
+<% if !@quotes.blank? %>
+	<% count = 1%>
+  	<% for item in @quotes %>
+  		<p></p>
+    	<%= count.to_s + "- " + item.quote%>
+    	<%= link_to("Delete" , {:action =>'deleteQuote', :id => item.id}) %>
+    	<% count = count + 1%>
+  	<% end %>
+<% else %>
+  
+<% end %>
+<p></p>
+<%= link_to("New Quote" , {:action =>'quoteInput'}) %>
+<%= link_to("List of users" , {:action =>'list_users'}) %>

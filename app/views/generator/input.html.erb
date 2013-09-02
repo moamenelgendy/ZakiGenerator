@@ -1,0 +1,13 @@
+<%= flash[:notice] %>
+<h1>Zaki Generator</h1>
+
+<%= form_for(:info, :url => {:action => 'show'}) do |f| %>
+	<p></p>
+	Name: <%= f.text_field(:name)%>
+	<p></p>
+	Number: <%= f.text_field(:number)%>
+	<p></p>
+	Show name in page: <%= f.check_box(:show_name)%>
+	<p></p>
+	<%= submit_tag("Generate")%>
+	<% end %>

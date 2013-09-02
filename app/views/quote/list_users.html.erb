@@ -1,0 +1,16 @@
+<%= flash[:notice] %>
+<h1>Users list</h1>
+
+<% if !@users.blank? %>
+	<% count = 1%>
+  	<% for item in @users %>
+  		<p></p>
+    	<%= count.to_s + "- " + item.name + " " + item.number.to_s %>
+    	<%= link_to("Delete" , {:action =>'deleteUser', :id => item.id}) %>
+    	<% count = count + 1%>
+  	<% end %>
+<% else %>
+  
+<% end %>
+<p></p>
+<%= link_to("List of quotes" , {:action =>'list'}) %>
