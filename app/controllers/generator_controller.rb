@@ -50,6 +50,13 @@ class GeneratorController < ApplicationController
       )
     end
   end
+
+  def aboutus
+    
+  end
+  def contactus
+    
+  end
 end
 
   

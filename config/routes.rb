@@ -4,6 +4,8 @@ ZakiGenerator::Application.routes.draw do
   get "generator/input"
   get "generator/view_quote"
   post "generator/show"
+  get "generator/aboutus"
+  get "generator/contactus"
 
   get "quote/deleteUser"
   get "quote/list_users"

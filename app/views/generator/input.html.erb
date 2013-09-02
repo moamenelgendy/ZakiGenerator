@@ -1,13 +1,64 @@
-<%= flash[:notice] %>
-<h1>Zaki Generator</h1>
-
-<%= form_for(:info, :url => {:action => 'show'}) do |f| %>
-	<p></p>
-	Name: <%= f.text_field(:name)%>
-	<p></p>
-	Number: <%= f.text_field(:number)%>
-	<p></p>
-	Show name in page: <%= f.check_box(:show_name)%>
-	<p></p>
-	<%= submit_tag("Generate")%>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Zaki Generator</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header-wrapper2">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="#">Zaki Generator</a></h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
+					<li><a href="aboutus.html" accesskey="3" title="">About Us</a></li>
+					<li><a href="contactus.html" accesskey="5" title="">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="form">
+	<CENTER>
+	<%= form_for(:info, :url => {:action => 'show'}) do |f| %>
+		<p></p>
+		<H1>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <%= f.text_field(:name , :class => 'textarea')%></H1> 
+		<p></p>
+		<H1>Number <%= f.text_field(:number, :class => 'textarea')%></H1>
+		<p></p>
+		<H3><%= f.check_box(:show_name )%> View the name in Zaki Generator's page </H3>
+		<p></p>
+		<%= submit_tag('Generate', :class => 'button') %>
+	</CENTER>
+					
 	<% end %>
+</div>
+<div id="wrapper">
+	<div id="page" class="container">
+		<div >
+			<div class="title">
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div id="copyright" class="container">
+	<p>Copyright (c) 2013. All rights reserved by Zaki Generator Developpers.</p>
+	<p>Design by <a href="https://www.facebook.com/mo2menelgendy">Moamen Gendy</a> & <a href="https://www.facebook.com/fadimakram">Fadi Makram</a></p>
+</div>
+</body>
+</html>
+
+
+<%= flash[:notice] %>
+
